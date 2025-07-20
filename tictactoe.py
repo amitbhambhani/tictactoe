@@ -41,7 +41,16 @@ def choice(choice, layout, turn):
 
 
 def checkWin(layout, patterns):
-    pass
+    xPattern = ""
+    oPattern = ""
+    for key in layout:
+        if layout[key] == "X":
+            xPattern += f"{key}"
+        if layout[key] == "O":
+            oPattern += f"{key}"
+    if xPattern in patterns or oPattern in patterns:
+        return True
+    return False
 
 
 def placeMark(layout, patterns, turn):
