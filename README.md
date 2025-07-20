@@ -17,16 +17,25 @@ An elegant command-line Tic-Tac-Toe game written in Python.
    git clone https://github.com/amitbhambhani/tictactoe.git
    cd tictactoe
    ```
-2. Run the game:
+2. Install pre-requisites:
+    ```bash
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install termcolor
+    ```
+3. Run the game:
    ```bash
    python3 tictactoe.py
    ```
 ## Features
+
 - Simple CLI interface
 - Turn-based gameplay
 - Clear win/draw detection
-- Color highlighting for X, O and selections
+- Color highlighting for X, O and board selections
 
 ## Future Plans
+
 - Implement online multiplayer
+- Dockerize program
 - Build a web version using Django
