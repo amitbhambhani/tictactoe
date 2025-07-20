@@ -60,9 +60,9 @@ def checkWin(layout, patterns):
 
 def placeMark(layout, patterns, turn):
     if turn % 2 == 0:
-        selection = input("Place an X!\n")
         correctChosen = False
         while correctChosen == False:
+            selection = input("Place an X!\n")
             correctChosen = choice(selection, layout, "X")
             if correctChosen == True and checkWin(layout, patterns) == True:
                 os.system("clear")
@@ -70,9 +70,9 @@ def placeMark(layout, patterns, turn):
                 print("X wins!")
                 return True
     else:
-        selection = input("Place an O!\n")
         correctChosen = False
         while correctChosen == False:
+            selection = input("Place an O!\n")
             correctChosen = choice(selection, layout, "O")
             if correctChosen == True and checkWin(layout, patterns) == True:
                 os.system("clear")
