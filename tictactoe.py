@@ -84,6 +84,7 @@ def placeMark(layout, patterns, turn):
 
 
 def game():
+    os.system("clear")
     cr.writer("Welcome to TicTacToe!")
     cr.writer("Just a couple reminders:")
     cr.writer("    - X goes first")
