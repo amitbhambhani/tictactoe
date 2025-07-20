@@ -30,11 +30,14 @@ def board(layout):
     return None
 
 
-board(layout)
-
-
 def choice(choice, layout, turn):
-    pass
+    num = int(choice)
+    if num > 0 and num < 10:
+        layout[num] = turn
+        return True
+    else:
+        print("Invalid choice, try again")
+        return False
 
 
 def checkWin(layout, patterns):
