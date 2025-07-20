@@ -2,6 +2,8 @@ import os
 
 from termcolor import colored
 
+import crawl as cr
+
 layout = {
     1: "1",
     2: "2",
@@ -82,6 +84,12 @@ def placeMark(layout, patterns, turn):
 
 
 def game():
+    cr.writer("Welcome to TicTacToe!")
+    cr.writer("Just a couple reminders:")
+    cr.writer("    - X goes first")
+    cr.writer("    - You need 3 in a row to win")
+    cr.writer("Good luck!")
+
     turn = 0
 
     patterns = {"123", "456", "789", "159", "258", "357", "147", "369"}
