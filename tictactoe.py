@@ -35,6 +35,9 @@ def board(layout):
 
 
 def choice(choice, layout, turn):
+    if not choice.isnumeric():
+        print("Invalid choice, try again")
+        return False
     num = int(choice)
     if num > 0 and num < 10 and layout[num] == str(num):
         if turn == "X":
@@ -83,13 +86,19 @@ def placeMark(layout, patterns, turn):
                 return True
 
 
-def game():
+def intro():
     os.system("clear")
     cr.writer("Welcome to TicTacToe!")
     cr.writer("Just a couple reminders:")
     cr.writer("    - X goes first")
     cr.writer("    - You need 3 in a row to win")
     cr.writer("Good luck!")
+
+
+def game():
+    runIntro = False
+    if runIntro:
+        intro()
 
     turn = 0
 
