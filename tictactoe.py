@@ -34,6 +34,10 @@ def board(layout):
     return None
 
 
+def stringBoard(layout):
+    return f"+---+---+---+\n| {colored(layout[1], "grey")} | {colored(layout[2], "grey")} | {colored(layout[3], "grey")} |\n+---+---+---+\n| {colored(layout[4], "grey")} | {colored(layout[5], "grey")} | {colored(layout[6], "grey")} |\n+---+---+---+\n| {colored(layout[7], "grey")} | {colored(layout[8], "grey")} | {colored(layout[9], "grey")} |\n+---+---+---+\n"
+
+
 def choice(choice, layout, turn):
     if not choice.isnumeric():
         print("Invalid choice, try again")

@@ -1,8 +1,11 @@
 import unittest
 
+import pytest
+
 import tictactoe as ttt
 
 
+@pytest.mark.usefixtures("db_class")
 class testGame(unittest.TestCase):
     def testChoice(self):
         layout = {
